@@ -1,11 +1,7 @@
 package math
 
-import (
-	"github.com/GDG-Cloud-Innopolis/Go-begginners/l3/test"
-)
-
 // Calc is a function that return an operation function
-func Calc(operation test.CalcOperation) func(a, b float64) float64 {
+func Calc(operation string) func(a, b float64) float64 {
 	// Place your solution here
 	switch operation {
 	case "+":
@@ -28,5 +24,3 @@ func Calc(operation test.CalcOperation) func(a, b float64) float64 {
 		return func(a, b float64) float64 { return 0 }
 	}
 }
-
-
